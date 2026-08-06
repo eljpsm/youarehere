@@ -2,5 +2,16 @@
 name = "youarehere"
 version = "0.1.0"
 edition = "2024"
+# Floor set by edition 2024.
+rust-version = "1.85"
+license = "GPL-3.0-or-later"
+publish = false
+description = "A minimalist shell prompt showing the user, hostname, directory, and git branch."
+repository = "https://github.com/eljpsm/youarehere"
 
 [dependencies]
+clap = { version = "4", features = ["derive"] }
+hostname = "0.4.2"
+
+[dev-dependencies]
+tempfile = "3"
