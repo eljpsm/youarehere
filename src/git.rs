@@ -124,9 +124,7 @@ fn exact_tag(start: &Path) -> Option<String> {
         .map(String::from)
 }
 
-/// SHA-1 is the version 0.1 repository contract. Doubles as the check that
-/// rejects a HEAD holding neither a ref nor an object id. A SHA-256
-/// repository detaches to a 64 character id and falls out here.
+/// Detached HEAD supports 40-character SHA-1 object IDs only.
 fn is_sha(s: &str) -> bool {
     s.len() == 40 && s.bytes().all(|b| matches!(b, b'0'..=b'9' | b'a'..=b'f'))
 }
