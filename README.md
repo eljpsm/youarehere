@@ -16,6 +16,9 @@ nix run github:eljpsm/youarehere
 make install
 ```
 
+Prebuilt Linux binaries are on the [releases
+page](https://github.com/eljpsm/youarehere/releases).
+
 ## Usage
 
 Add to your shell config:
