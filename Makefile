@@ -1,4 +1,4 @@
-.PHONY: build install test test-cli bench coverage coverage-html lint fmt release
+.PHONY: build install test test-cli bench coverage coverage-html lint fmt hooks release
 
 VERSION = $(shell sed -n 's/^version = "\(.*\)"/\1/p' Cargo.toml)
 
@@ -37,6 +37,10 @@ lint:
 # Format the Rust source.
 fmt:
 	cargo fmt
+
+# Install the git hooks from prek.toml. Run once per checkout.
+hooks:
+	prek install
 
 # Tag the current commit with the Cargo.toml version and push the tag.
 # CI then runs goreleaser and publishes the binaries.

@@ -30,6 +30,7 @@
             pkgs.rust-analyzer
             pkgs.gnumake
             pkgs.cargo-llvm-cov
+            pkgs.prek
             pkgs.git
             pkgs.hyperfine
             pkgs.jq
